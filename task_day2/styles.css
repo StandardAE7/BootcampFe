@@ -1,0 +1,184 @@
+/* Set the background color */
+body {
+    background-color: #508bfc;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar as the welcome section */
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #170961;
+}
+
+/* Make the welcome text responsive */
+.welcome-text {
+    font-size: 2.5rem; /* Default size */
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 2rem; /* Smaller on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-text {
+        font-size: 1.5rem; /* Smaller on mobile */
+    }
+}
+
+/* Customize Navbar font size */
+.navbar-brand {
+    font-size: 1.5rem; /* Sesuaikan ukuran teks */
+}
+
+.navbar .settings-icon {
+    font-size: 2rem; /* Sesuaikan ukuran ikon */
+}
+
+
+/* Icon styling */
+.settings-icon {
+    color: white;
+    margin-right: 5px; /* To match card padding */
+    cursor: pointer;
+    font-size: 2.5rem; /* Default size */
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect for settings icon */
+.settings-icon:hover {
+    color: #ffeb3b; /* Change color on hover */
+    transform: rotate(60deg); /* Rotate on hover */
+}
+
+/* Hover effects for card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+    cursor: pointer;
+}
+
+/* Make card text responsive */
+.card-text, .card-title, .card-subtitle {
+    color: inherit;
+    font-size: 1.2rem; /* Default text size */
+}
+
+/* Make cards have equal height */
+.row {
+    display: flex;
+}
+
+.equal-height {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height .card-body {
+    flex-grow: 1;
+}
+
+#addTaskForm {
+    margin-bottom: 50px;
+}
+
+/* Disable hover effect for form card */
+.no-hover:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .settings-icon {
+        font-size: 2rem; /* Slightly smaller on large tablets/smaller desktops */
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-icon {
+        font-size: 1.8rem; /* Smaller on tablets */
+    }
+
+    .card-text, .card-title, .card-subtitle {
+        font-size: 1rem; /* Smaller text on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .settings-icon {
+        font-size: 1.5rem; /* Smallest on mobile */
+    }
+
+    .card-text, .card-title, .card-subtitle {
+        font-size: 0.9rem; /* Smaller text on mobile */
+    }
+}
+
+/* Footer styles */
+.footer {
+    position: relative; /* This keeps it at the bottom but doesn't fix it to the screen */
+    background-color: #170961;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffeb3b;
+}
+
+/* Disable click on entire card */
+.no-click {
+    pointer-events: none; /* Disable pointer events (click, hover, etc.) */
+}
+
+/* Enable click only on the submit button inside the form */
+.no-click form button[type="submit"] {
+    pointer-events: auto; /* Re-enable pointer events (click, hover, etc.) for submit button */
+}
+
+/* Ensure footer buttons in card are properly aligned */
+.card-footer {
+    background-color: transparent; /* Remove background from footer */
+    border-top: none; /* Remove border */
+    padding: 10px;
+}
+
+/* Add margin above the buttons to create space between card and buttons */
+.mt-3 {
+    margin-top: 15px;
+}
+
+/* Ensure buttons are full width */
+.btn-block {
+    width: 100%;
+}
+
+/* Button styling for better readability */
+.btn-warning {
+    color: white;
+}
+
+.btn-danger {
+    color: white;
+}
+
+/* Add blur effect */
+body.modal-open #main-content {
+    filter: blur(5px);
+}
